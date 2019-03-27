@@ -9,7 +9,7 @@ Via diese Rollen kann die Seilbahn manuell angetreiben werden. Diese beide Rolle
 Zum Einsatz kommen:
 
 - Holzspielzeug-Seilbahn
-- 2 Getriebemotor mit Rad (https://www.reichelt.de/getriebemotor-mit-rad-3-9-v-welle-3-5-mm-com-motor-rad-p219038.html)
+- 2 Getriebemotoren mit Rad (https://www.reichelt.de/getriebemotor-mit-rad-3-9-v-welle-3-5-mm-com-motor-rad-p219038.html)
 - Raspberry Pi Model 3 B
 - RPi Motor Driver Board (https://www.waveshare.com/rpi-motor-driver-board.htm)
 - Powerbank (https://www.manualslib.com/manual/1192439/Tecxus-Tp-10000.html)
