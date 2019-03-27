@@ -17,6 +17,6 @@ Zum Einsatz kommen:
 
 ## Lösungsansatz
 
-Der Raspberry Pi ist als WiFi-Access-Point aufgesetzt auf dem ein python-basierte Webapplikation gehostet wird (Angular-Frontend mit CherryPy-Backend).
+Der Raspberry Pi ist als WiFi-Access-Point aufgesetzt auf dem eine python-basierte Webapplikation gehostet wird (Angular-Frontend mit CherryPy-Backend).
 Das Smartphone greift via WiFi auf die Webapplikation zu und zeigt im Browser des Smartphones die Bedienoberfläche der Seilbahn an.
 Steuerbefehle vom Smartphone (z.B. Start, Stopp) werden vom CherryPy-Backend via RPi Motor Driver Board an die Motoren weitergeleitet.
