@@ -10,29 +10,28 @@ export class CablewayComponent implements OnInit {
 
   constructor(private http: HttpClient) {
 
-   }
+  }
 
   ngOnInit() {
   }
 
   onStartLeft(): void {
-    let resp = this.http.get<string>('startLeft');
-    alert(resp);
+    this.http.get('startLeft').subscribe();
   }
 
   onStartRight(): void {
-
+    this.http.get('startRight').subscribe();
   }
 
   onStop(): void {
-
+    this.http.get('stop').subscribe();
   }
 
   onFaster(): void {
-
+    this.http.get('faster').subscribe();
   }
 
   onSlower(): void {
-
+    this.http.get('slower').subscribe();
   }
 }

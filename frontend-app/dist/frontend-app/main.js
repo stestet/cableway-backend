@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n   <p>{{title}}</p> \r\n</div>\r\n<app-cableway></app-cableway>"
+module.exports = "<div>\n   <p>{{title}}</p> \n</div>\n<app-cableway></app-cableway>"
 
 /***/ }),
 
@@ -172,16 +172,19 @@ var CablewayComponent = /** @class */ (function () {
     CablewayComponent.prototype.ngOnInit = function () {
     };
     CablewayComponent.prototype.onStartLeft = function () {
-        var resp = this.http.get('startLeft');
-        alert(resp);
+        this.http.get('startLeft').subscribe();
     };
     CablewayComponent.prototype.onStartRight = function () {
+        this.http.get('startRight').subscribe();
     };
     CablewayComponent.prototype.onStop = function () {
+        this.http.get('stop').subscribe();
     };
     CablewayComponent.prototype.onFaster = function () {
+        this.http.get('faster').subscribe();
     };
     CablewayComponent.prototype.onSlower = function () {
+        this.http.get('slower').subscribe();
     };
     CablewayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -259,7 +262,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\stefan.stettler\source\repos\cableway\cableway-backend\frontend-app\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/Stefan/Projects/cableway/cableway-backend/frontend-app/src/main.ts */"./src/main.ts");
 
 
 /***/ })
