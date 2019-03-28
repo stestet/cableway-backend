@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n   <p>Sebastians Seilbahn</p> \n</div>\n<div>\n  <button mat-fab>Start Left</button>\n  <button mat-fab>Stop</button>\n  <button mat-fab>Start Right</button>\n</div>\n<div>\n  <button>Slower</button>\n  <button>Faster</button>\n</div>"
+module.exports = "<div>\r\n   <p>{{title}}</p> \r\n</div>\r\n<app-cableway></app-cableway>"
 
 /***/ }),
 
@@ -91,9 +91,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _cableway_cableway_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cableway/cableway.component */ "./src/app/cableway/cableway.component.ts");
 
 // import { BrowserModule } from '@angular/platform-browser';
+
+
 
 
 
@@ -104,17 +108,90 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _cableway_cableway_component__WEBPACK_IMPORTED_MODULE_6__["CablewayComponent"]
             ],
             imports: [
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/cableway/cableway.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/cableway/cableway.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NhYmxld2F5L2NhYmxld2F5LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/cableway/cableway.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/cableway/cableway.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n  <button mat-fab (click)=\"onStartLeft()\">Start Left</button>\n  <button mat-fab (click)=\"onStop()\">Stop</button>\n  <button mat-fab (click)=\"onStartRight()\">Start Right</button>\n</div>\n<div>\n  <button (click)=\"onSlower()\">Slower</button>\n  <label>5</label>\n  <button (click)=\"onFaster()\">Faster</button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/cableway/cableway.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/cableway/cableway.component.ts ***!
+  \************************************************/
+/*! exports provided: CablewayComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CablewayComponent", function() { return CablewayComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var CablewayComponent = /** @class */ (function () {
+    function CablewayComponent(http) {
+        this.http = http;
+    }
+    CablewayComponent.prototype.ngOnInit = function () {
+    };
+    CablewayComponent.prototype.onStartLeft = function () {
+        var resp = this.http.get('startLeft');
+        alert(resp);
+    };
+    CablewayComponent.prototype.onStartRight = function () {
+    };
+    CablewayComponent.prototype.onStop = function () {
+    };
+    CablewayComponent.prototype.onFaster = function () {
+    };
+    CablewayComponent.prototype.onSlower = function () {
+    };
+    CablewayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-cableway',
+            template: __webpack_require__(/*! ./cableway.component.html */ "./src/app/cableway/cableway.component.html"),
+            styles: [__webpack_require__(/*! ./cableway.component.css */ "./src/app/cableway/cableway.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], CablewayComponent);
+    return CablewayComponent;
 }());
 
 
@@ -182,7 +259,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Stefan/Projects/cableway/cableway-backend/frontend-app/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\stefan.stettler\source\repos\cableway\cableway-backend\frontend-app\src\main.ts */"./src/main.ts");
 
 
 /***/ })
