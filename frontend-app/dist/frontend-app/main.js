@@ -145,7 +145,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <button mat-fab (click)=\"onStartLeft()\">Start Left</button>\n  <button mat-fab (click)=\"onStop()\">Stop</button>\n  <button mat-fab (click)=\"onStartRight()\">Start Right</button>\n</div>\n<div>\n  <button (click)=\"onSlower()\">Slower</button>\n  <label>5</label>\n  <button (click)=\"onFaster()\">Faster</button>\n</div>\n"
+module.exports = "<div>\n  <i class=\"material-icons\">face</i>\n  <button mat-fab (click)=\"onStartLeft()\">Start Left</button>\n  <button mat-fab (click)=\"onStop()\">Stop</button>\n  <button mat-fab (click)=\"onStartRight()\">Start Right</button>\n</div>\n<div>\n  <button (click)=\"onSlower()\">Slower</button>\n  <label>5</label>\n  <button (click)=\"onFaster()\">Faster</button>\n</div>\n"
 
 /***/ }),
 
