@@ -1,12 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
+
 @Component({
   selector: 'app-cableway',
   templateUrl: './cableway.component.html',
   styleUrls: ['./cableway.component.css']
 })
 export class CablewayComponent implements OnInit {
+
+  title = 'Sebastians Seilbahn';
 
   constructor(private http: HttpClient) {
 

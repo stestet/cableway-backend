@@ -1,10 +1,36 @@
-<div>
-  <button mat-fab (click)="onStartLeft()">Start Left</button>
-  <button mat-fab (click)="onStop()">Stop</button>
-  <button mat-fab (click)="onStartRight()">Start Right</button>
-</div>
-<div>
-  <button (click)="onSlower()">Slower</button>
-  <label>5</label>
-  <button (click)="onFaster()">Faster</button>
-</div>
+<mat-grid-list cols="3" rowHeight="75">
+  <mat-grid-tile colspan="3" rowspan="1">
+    <p>{{title}}</p>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button mat-fab color="primary" (click)="onStartLeft()">
+      <mat-icon>skip_previous</mat-icon>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button mat-fab (click)="onStop()">
+        <mat-icon>stop</mat-icon>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button mat-fab color="primary" (click)="onStartRight()">
+        <mat-icon>skip_next</mat-icon>
+    </button>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button mat-fab color="basic" (click)="onSlower()">
+        <mat-icon>call_received</mat-icon>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <label>5</label>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button mat-fab color="basic" (click)="onFaster()">
+        <mat-icon>call_made</mat-icon>
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>

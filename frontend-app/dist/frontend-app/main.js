@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n   <p>{{title}}</p> \n</div>\n<app-cableway></app-cableway>"
+module.exports = "<mat-sidenav-container>\r\n    <app-cableway></app-cableway>\r\n</mat-sidenav-container>\r\n"
 
 /***/ }),
 
@@ -61,7 +61,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'Sebastians Seilbahn';
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -113,7 +112,10 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
             providers: [],
@@ -145,7 +147,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <button mat-fab (click)=\"onStartLeft()\">Start Left</button>\n  <button mat-fab (click)=\"onStop()\">Stop</button>\n  <button mat-fab (click)=\"onStartRight()\">Start Right</button>\n</div>\n<div>\n  <button (click)=\"onSlower()\">Slower</button>\n  <label>5</label>\n  <button (click)=\"onFaster()\">Faster</button>\n</div>\n"
+module.exports = "<mat-grid-list cols=\"3\" rowHeight=\"75\">\n  <mat-grid-tile colspan=\"3\" rowspan=\"1\">\n    <p>{{title}}</p>\n  </mat-grid-tile>\n\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\n    <button mat-fab color=\"primary\" (click)=\"onStartLeft()\">\n      <mat-icon>skip_previous</mat-icon>\n    </button>\n  </mat-grid-tile>\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\n    <button mat-fab (click)=\"onStop()\">\n        <mat-icon>stop</mat-icon>\n    </button>\n  </mat-grid-tile>\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\n    <button mat-fab color=\"primary\" (click)=\"onStartRight()\">\n        <mat-icon>skip_next</mat-icon>\n    </button>\n  </mat-grid-tile>\n\n\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\n    <button mat-fab color=\"basic\" (click)=\"onSlower()\">\n        <mat-icon>call_received</mat-icon>\n    </button>\n  </mat-grid-tile>\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\n    <label>5</label>\n  </mat-grid-tile>\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\n    <button mat-fab color=\"basic\" (click)=\"onFaster()\">\n        <mat-icon>call_made</mat-icon>\n    </button>\n  </mat-grid-tile>\n</mat-grid-list>"
 
 /***/ }),
 
@@ -168,6 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 var CablewayComponent = /** @class */ (function () {
     function CablewayComponent(http) {
         this.http = http;
+        this.title = 'Sebastians Seilbahn';
     }
     CablewayComponent.prototype.ngOnInit = function () {
     };
@@ -262,7 +265,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Stefan/Projects/cableway/cableway-backend/frontend-app/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\stefan.stettler\source\repos\cableway\cableway-backend\frontend-app\src\main.ts */"./src/main.ts");
 
 
 /***/ })
