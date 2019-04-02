@@ -1,5 +1,5 @@
-<mat-grid-list cols="3" rowHeight="75">
-  <mat-grid-tile colspan="3" rowspan="1">
+<mat-grid-list cols="4" rowHeight="75">
+  <mat-grid-tile colspan="4" rowspan="1">
     <p>{{title}}</p>
   </mat-grid-tile>
 
@@ -8,7 +8,7 @@
       <mat-icon>skip_previous</mat-icon>
     </button>
   </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
+  <mat-grid-tile colspan="2" rowspan="1">
     <button mat-fab (click)="onStop()">
         <mat-icon>stop</mat-icon>
     </button>
@@ -20,15 +20,15 @@
   </mat-grid-tile>
 
 
-  <mat-grid-tile colspan="1" rowspan="1">
+  <mat-grid-tile colspan="2" rowspan="1">
     <button mat-fab color="basic" (click)="onSlower()">
         <mat-icon>call_received</mat-icon>
     </button>
   </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
+  <!-- <mat-grid-tile colspan="1" rowspan="1">
     <label>5</label>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
+  </mat-grid-tile> -->
+  <mat-grid-tile colspan="2" rowspan="1">
     <button mat-fab color="basic" (click)="onFaster()">
         <mat-icon>call_made</mat-icon>
     </button>
