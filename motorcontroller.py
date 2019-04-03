@@ -20,11 +20,15 @@ class MotorController(object):
         GPIO.setup(self.PWMA2,GPIO.OUT)
         GPIO.setup(self.D1,GPIO.OUT)
 
-        self.p1 = GPIO.PWM(self.D1,500)
-        if (self.p1 != None) :
-            self.p1.start(self.PWM)
+        self.p = GPIO.PWM(self.D1,500)
+        if (self.p != None) :
+            self.p.start(self.PWM)
 
     def	set_motor(self, A1,A2):
+        # set to zero to avoid short-circuit
+        GPIO.output(self.PWMA1,0)
+        GPIO.output(self.PWMA2,0)
+
         GPIO.output(self.PWMA1,A1)
         GPIO.output(self.PWMA2,A2)
 
@@ -40,11 +44,11 @@ class MotorController(object):
     def faster(self):
         if (self.PWM + 10 < 101):
             self.PWM = self.PWM + 10
-            if (self.p1 != None) :
-                self.p1.ChangeDutyCycle(self.PWM)
+            if (self.p != None) :
+                self.p.ChangeDutyCycle(self.PWM)
 
     def slower(self):
         if (self.PWM - 10 > -1):
             self.PWM = self.PWM - 10
-            if (self.p1 != None) :
-                self.p1.ChangeDutyCycle(self.PWM)    
+            if (self.p != None) :
+                self.p.ChangeDutyCycle(self.PWM)    
