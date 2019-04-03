@@ -21,6 +21,9 @@ Der Raspberry Pi ist als WiFi-Access-Point aufgesetzt auf dem eine python-basier
 Das Smartphone greift via WiFi auf die Webapplikation zu und zeigt im Browser des Smartphones die Bedienoberfläche der Seilbahn an.
 Steuerbefehle vom Smartphone (z.B. Start, Stopp) werden vom CherryPy-Backend via RPi Motor Driver Board an die Motoren weitergeleitet.
 
+![Screenshot 1](/screenshots/solution-blocks.PNG)
+
+
 ## Screenshots
 
 ![Screenshot 1](/screenshots/screenshot-1.PNG)
