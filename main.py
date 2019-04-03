@@ -17,7 +17,6 @@ if __name__ == '__main__':
             'tools.staticdir.index': 'index.html',
         }
     }
-    motorcontroller = mc.MotorController()
-    motorcontroller.init()
     
+    motorcontroller = mc.MotorController()
     cherrypy.quickstart(server.CablewayServer(motorcontroller),'/', conf)

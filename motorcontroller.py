@@ -1,7 +1,19 @@
 
 class MotorController(object):
-    def init(self):
-        return "Ok"
+    def __init__(self):
+        pass
 
     def turnLeft(self):
-        return "Turning Left"
+        pass
+
+    def turnRight(self):
+        pass    
+
+    def stop(self):
+        pass  
+
+    def faster(self):
+        pass
+
+    def slower(self):
+        pass    

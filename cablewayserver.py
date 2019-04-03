@@ -13,20 +13,19 @@ class CablewayServer(object):
     @cherrypy.expose
     def startLeft(self):
         self.motor.turnLeft()
-        return "turning left"
 
     @cherrypy.expose
     def startRight(self):
-        return "turning right"       
+        self.motor.turnRight()      
 
     @cherrypy.expose
     def stop(self):
-        return "stop"  
+        self.motor.stop()
 
     @cherrypy.expose
     def faster(self):
-        return "faster" 
+        self.motor.faster()
 
     @cherrypy.expose
     def slower(self):
-        return "slower"
+        self.motor.slower()
