@@ -23,4 +23,4 @@ Steuerbefehle vom Smartphone (z.B. Start, Stopp) werden vom CherryPy-Backend via
 
 ## Screenshots
 
-![Screenshot](screenshots/screenshot-1.png)
+![Screenshot](/screenshots/screenshot-1.png)
