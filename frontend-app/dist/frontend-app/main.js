@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container>\r\n    <app-cableway></app-cableway>\r\n</mat-sidenav-container>\r\n"
+module.exports = "<app-navigation></app-navigation>\r\n\r\n"
 
 /***/ }),
 
@@ -93,8 +93,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _cableway_cableway_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cableway/cableway.component */ "./src/app/cableway/cableway.component.ts");
+/* harmony import */ var _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./navigation/navigation.component */ "./src/app/navigation/navigation.component.ts");
 
 // import { BrowserModule } from '@angular/platform-browser';
+
 
 
 
@@ -108,13 +110,16 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _cableway_cableway_component__WEBPACK_IMPORTED_MODULE_6__["CablewayComponent"]
+                _cableway_cableway_component__WEBPACK_IMPORTED_MODULE_6__["CablewayComponent"],
+                _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_7__["NavigationComponent"]
             ],
             imports: [
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
@@ -147,7 +152,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-grid-list cols=\"4\" rowHeight=\"75\">\r\n  <mat-grid-tile colspan=\"4\" rowspan=\"1\">\r\n    <p>{{title}}</p>\r\n  </mat-grid-tile>\r\n\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <button mat-fab color=\"primary\" (click)=\"onStartLeft()\">\r\n      <mat-icon>skip_previous</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"2\" rowspan=\"1\">\r\n    <button mat-fab (click)=\"onStop()\">\r\n        <mat-icon>stop</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <button mat-fab color=\"primary\" (click)=\"onStartRight()\">\r\n        <mat-icon>skip_next</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n\r\n\r\n  <mat-grid-tile colspan=\"2\" rowspan=\"1\">\r\n    <button mat-fab color=\"basic\" (click)=\"onSlower()\">\r\n        <mat-icon>call_received</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <!-- <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <label>5</label>\r\n  </mat-grid-tile> -->\r\n  <mat-grid-tile colspan=\"2\" rowspan=\"1\">\r\n    <button mat-fab color=\"basic\" (click)=\"onFaster()\">\r\n        <mat-icon>call_made</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n</mat-grid-list>"
+module.exports = "<mat-grid-list cols=\"4\" rowHeight=\"75\">\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <button mat-fab color=\"primary\" (click)=\"onStartLeft()\">\r\n      <mat-icon>skip_previous</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"2\" rowspan=\"1\">\r\n    <button mat-fab (click)=\"onStop()\">\r\n        <mat-icon>stop</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <button mat-fab color=\"primary\" (click)=\"onStartRight()\">\r\n        <mat-icon>skip_next</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n\r\n\r\n  <mat-grid-tile colspan=\"2\" rowspan=\"1\">\r\n    <button mat-fab color=\"basic\" (click)=\"onSlower()\">\r\n        <mat-icon>call_received</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <!-- <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <label>5</label>\r\n  </mat-grid-tile> -->\r\n  <mat-grid-tile colspan=\"2\" rowspan=\"1\">\r\n    <button mat-fab color=\"basic\" (click)=\"onFaster()\">\r\n        <mat-icon>call_made</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n</mat-grid-list>"
 
 /***/ }),
 
@@ -198,6 +203,68 @@ var CablewayComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], CablewayComponent);
     return CablewayComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/navigation/navigation.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/navigation/navigation.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL25hdmlnYXRpb24vbmF2aWdhdGlvbi5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/navigation/navigation.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/navigation/navigation.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-toolbar>\n  <mat-toolbar-row>\n    <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    Sebastians Seilbahn\n  </mat-toolbar-row>\n</mat-toolbar>\n<mat-sidenav-container hasBackdrop=true>\n  <mat-sidenav #drawer>\n    <mat-action-list>\n      <button mat-list-item (click)=\"shutdown()\">\n        <mat-icon>power_settings_new</mat-icon> Ausschalten\n      </button>\n    </mat-action-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <app-cableway></app-cableway>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
+
+/***/ }),
+
+/***/ "./src/app/navigation/navigation.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/navigation/navigation.component.ts ***!
+  \****************************************************/
+/*! exports provided: NavigationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationComponent", function() { return NavigationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var NavigationComponent = /** @class */ (function () {
+    function NavigationComponent(http) {
+        this.http = http;
+    }
+    NavigationComponent.prototype.ngOnInit = function () {
+    };
+    NavigationComponent.prototype.onShutdown = function () {
+        this.http.get('shutdown').subscribe();
+    };
+    NavigationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-navigation',
+            template: __webpack_require__(/*! ./navigation.component.html */ "./src/app/navigation/navigation.component.html"),
+            styles: [__webpack_require__(/*! ./navigation.component.css */ "./src/app/navigation/navigation.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], NavigationComponent);
+    return NavigationComponent;
 }());
 
 

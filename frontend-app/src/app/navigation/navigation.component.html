@@ -1,0 +1,20 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    Sebastians Seilbahn
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container hasBackdrop=true>
+  <mat-sidenav #drawer>
+    <mat-action-list>
+      <button mat-list-item (click)="shutdown()">
+        <mat-icon>power_settings_new</mat-icon> Ausschalten
+      </button>
+    </mat-action-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-cableway></app-cableway>
+  </mat-sidenav-content>
+</mat-sidenav-container>

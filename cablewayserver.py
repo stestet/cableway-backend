@@ -1,4 +1,6 @@
 import cherrypy
+from subprocess import call
+
 
 class CablewayServer(object):
     def __init__(self, motorController):
@@ -27,3 +29,7 @@ class CablewayServer(object):
     @cherrypy.expose
     def slower(self):
         self.motor.slower()
+
+    @cherrypy.expose
+    def shutdown(self):
+        call("sudo shutdown -h now", shell=True)    
