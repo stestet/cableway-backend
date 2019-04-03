@@ -1,6 +1,4 @@
 import cherrypy
-import os, os.path
-import motorcontroller as mc
 
 class CablewayServer(object):
     def __init__(self, motorController):
