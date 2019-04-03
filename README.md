@@ -4,7 +4,7 @@
 
 Das ist das Bastelprojekt für meinen Sohn bei dem es um die Fernsteuerung einer Holzspielzeug-Seilbahn geht.
 Die Holzspielzeug-Seilbahn hat 2 Kabinen bei welchen das Zugseil 'bergseitig' via 2 Rollen umgelenkt wird.
-Via diese Rollen kann die Seilbahn manuell angetrieben werden. Diese Rolle werden neu durch 1 Gleichstrommotor-getriebenes Exemplare ersetzt.
+Via diese Rollen kann die Seilbahn manuell angetrieben werden. Diese Rolle wird neu durch 1 Gleichstrommotor-getriebenes Exemplare ersetzt.
 
 Zum Einsatz kommen:
 
