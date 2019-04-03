@@ -227,7 +227,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar>\n  <mat-toolbar-row>\n    <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    Sebastians Seilbahn\n  </mat-toolbar-row>\n</mat-toolbar>\n<mat-sidenav-container hasBackdrop=true>\n  <mat-sidenav #drawer>\n    <mat-action-list>\n      <button mat-list-item (click)=\"shutdown()\">\n        <mat-icon>power_settings_new</mat-icon> Ausschalten\n      </button>\n    </mat-action-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <app-cableway></app-cableway>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
+module.exports = "<mat-toolbar>\n  <mat-toolbar-row>\n    <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    Sebastians Seilbahn\n  </mat-toolbar-row>\n</mat-toolbar>\n<mat-sidenav-container hasBackdrop=true>\n  <mat-sidenav #drawer>\n    <mat-action-list>\n      <button mat-list-item (click)=\"onShutdown()\">\n        <mat-icon>power_settings_new</mat-icon> Ausschalten\n      </button>\n    </mat-action-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <app-cableway></app-cableway>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
 
 /***/ }),
 
