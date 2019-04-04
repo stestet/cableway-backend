@@ -43,4 +43,5 @@ The motor movements (left/right) are limited in time (5s), i.e. after this time 
 
 ![Impression 1](/screenshots/impression-1.jpg)
 ![Impression 2](/screenshots/impression-2.jpg)
-![Impression 2](/screenshots/impression-3.jpg)
+![Impression 3](/screenshots/impression-4.jpg)
+![Impression 4](/screenshots/impression-3.jpg)
