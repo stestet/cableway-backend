@@ -13,7 +13,7 @@ if __name__ == '__main__':
     conf = {
         '/': {
             'tools.staticdir.on': True,
-            'tools.staticdir.dir': os.path.abspath(os.getcwd()) + '/frontend-app/dist/frontend-app',
+            'tools.staticdir.dir': os.path.dirname(os.path.abspath(__file__)) + '/frontend-app/dist/frontend-app',
             'tools.staticdir.index': 'index.html',
         }
     }
