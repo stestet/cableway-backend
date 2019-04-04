@@ -1,6 +1,7 @@
 import cherrypy
 from subprocess import call
 import threading
+import json
 
 
 class CablewayServer(object):
@@ -10,7 +11,9 @@ class CablewayServer(object):
 
     @cherrypy.expose
     def status(self):
-        return "Ok"
+        data = {}
+        data['speed'] = self.motor.PWM / 10
+        return json.dumps(data)
 
     @cherrypy.expose
     def startLeft(self):
@@ -24,12 +27,7 @@ class CablewayServer(object):
 
     @cherrypy.expose
     def stop(self):
-        print('Stop called')
-        if (self.timer != None):
-            if (self.timer.is_alive() == True):
-                self.timer.cancel()
-            self.timer = None
-        
+        self.stopTimer()       
         self.motor.stop()
 
     @cherrypy.expose
@@ -52,3 +50,9 @@ class CablewayServer(object):
         else:
             if (self.timer.is_alive() == False):
                 self.timer.start()
+
+    def stopTimer(self):
+        if (self.timer != None):
+            if (self.timer.is_alive() == True):
+                self.timer.cancel()
+            self.timer = None
