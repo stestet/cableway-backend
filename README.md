@@ -4,11 +4,11 @@
 
 Das ist das Bastelprojekt für meinen Sohn bei dem es um die Fernsteuerung seiner Holzspielzeug-Seilbahn geht.
 Die Holzspielzeug-Seilbahn hat 2 Kabinen bei welchen das Zugseil 'bergseitig' via 2 Rollen umgelenkt wird.
-Via dieser Rollen kann die Seilbahn manuell angetrieben werden. Eine dieser Rolle wird neu durch 1 Gleichstrommotor-getriebenes Exemplare ersetzt.
+Via dieser Rollen kann die Seilbahn manuell angetrieben werden. Eine dieser Rolle wird neu durch ein Gleichstrommotor-getriebenes Exemplar ersetzt.
 
 This is the tinkering project for my son which is about the remote control of his wooden toy cableway.
 The wooden toy cableway has 2 cabins with which the pull cable is deflected 'uphill' via 2 pulleys.
-The cableway can be driven manually via these pulleys. One of these pulleys is now replaced by 1 DC motor-driven model.
+The cableway can be driven manually via these pulleys. One of these pulleys is now replaced by a DC motor-driven model.
 
 Was braucht's / What's it take:
 
@@ -16,7 +16,7 @@ Was braucht's / What's it take:
 - [Getriebemotor mit Rad](https://www.reichelt.de/getriebemotor-mit-rad-3-9-v-welle-3-5-mm-com-motor-rad-p219038.html) / [DC motor with wheel](https://www.reichelt.de/getriebemotor-mit-rad-3-9-v-welle-3-5-mm-com-motor-rad-p219038.html)
 - Raspberry Pi Model 3 B
 - [RPi Motor Driver Board](https://www.waveshare.com/rpi-motor-driver-board.htm)
-- [Powerbank] https://www.manualslib.com/manual/1192439/Tecxus-Tp-10000.html)
+- [Powerbank](https://www.manualslib.com/manual/1192439/Tecxus-Tp-10000.html)
 - altes Smartphone / old Smartphone
 
 ## Lösungsansatz / Solution
@@ -30,8 +30,6 @@ The Raspberry Pi is set up as a WiFi access point on which a python-based web ap
 The smartphone accesses the web application via WiFi and displays the user interface of the cable way in the smartphone's browser.
 Control commands from the smartphone (e.g. start, stop) are forwarded from the CherryPy backend to the motor via the RPi Motor Driver Board.
 The motor movements (left/right) are limited in time (5s), i.e. after this time the motor stops turning. The aim is to prevent motor damage (e.g. due to overheating) due to operating errors.
-
-Translated with www.DeepL.com/Translator
 
 ![Solution](/screenshots/solution-blocks.PNG)
 
