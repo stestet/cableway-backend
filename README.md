@@ -19,7 +19,7 @@ Was braucht's / What's it take:
 - [Powerbank](https://www.manualslib.com/manual/1192439/Tecxus-Tp-10000.html)
 - altes Smartphone / old Smartphone
 
-## Lösungsansatz / Solution
+## Lösungsansatz / Solution approach
 
 Der Raspberry Pi ist als WiFi-Access-Point aufgesetzt auf dem eine python-basierte Webapplikation gehostet wird (Angular-Frontend mit CherryPy-Backend).
 Das Smartphone greift via WiFi auf die Webapplikation zu und zeigt im Browser des Smartphones die Bedienoberfläche der Seilbahn an.
@@ -39,7 +39,7 @@ The motor movements (left/right) are limited in time (5s), i.e. after this time 
 ![Screenshot 1](/screenshots/screenshot-1.PNG)
 ![Screenshot 2](/screenshots/screenshot-2.PNG)
 
-## Impressionen
+## Impressionen / Impressions
 
 ![Impression 1](/screenshots/impression-1.jpg)
 ![Impression 2](/screenshots/impression-2.jpg)
