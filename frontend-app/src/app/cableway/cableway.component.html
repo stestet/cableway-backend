@@ -1,4 +1,4 @@
-<mat-grid-list cols="1" rowHeight="90">
+<mat-grid-list cols="1" rowHeight="100">
   <mat-grid-tile colspan="1" rowspan="3"> 
     <img src="assets/seilbahn.jpg">
   </mat-grid-tile>
@@ -17,7 +17,7 @@
     <button mat-fab color="basic" style="margin: 5px" (click)="onSlower()">
       <mat-icon>exposure_neg_1</mat-icon>
     </button>
-    <mat-form-field appearance="standard" color="basic" style="width: 90px; text-align: center" > 
+    <mat-form-field appearance="outline" color="basic" style="width: 115px; height: 75px; text-align: center" > 
       <mat-label>Geschwindigkeit</mat-label>
       <input matInput disabled=true [value]="speed" style="font-size: 24px" > 
     </mat-form-field>
