@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CablewayComponent implements OnInit {
 
-  title = 'Sebastians Seilbahn';
+  speed = '?';
 
   constructor(private http: HttpClient) {
 

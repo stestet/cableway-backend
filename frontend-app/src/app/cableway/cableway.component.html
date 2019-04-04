@@ -1,26 +1,28 @@
-<mat-grid-list cols="1" rowHeight="75">
+<mat-grid-list cols="1" rowHeight="90">
   <mat-grid-tile colspan="1" rowspan="3"> 
     <img src="assets/seilbahn.jpg">
   </mat-grid-tile>
   <mat-grid-tile colspan="1" rowspan="1">
-    <button mat-fab style="margin: 5px" (click)="onStartLeft()">
-      <mat-icon>skip_previous</mat-icon>
+    <button mat-fab style="margin: 5px; " (click)="onStartLeft()">
+      <mat-icon style="font-size: 42px; display: flex; align-items: center; justify-content: center;">replay_5</mat-icon>
     </button>
     <button mat-fab style="margin: 5px" (click)="onStop()">
-      <mat-icon>stop</mat-icon>
+      <mat-icon  style="font-size: 36px; display: flex; align-items: center; justify-content: center;">stop</mat-icon>
     </button>
     <button mat-fab style="margin: 5px" (click)="onStartRight()">
-      <mat-icon>skip_next</mat-icon>
+      <mat-icon  style="font-size: 42px; display: flex; align-items: center; justify-content: center;">forward_5</mat-icon>
     </button>
   </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <div class="mat-body">Langsamer</div>
+  <mat-grid-tile colspan="1" rowspan="1">   
     <button mat-fab color="basic" style="margin: 5px" (click)="onSlower()">
-      <mat-icon>call_received</mat-icon>
+      <mat-icon>exposure_neg_1</mat-icon>
     </button>
+    <mat-form-field appearance="standard" color="basic" style="width: 90px; text-align: center" > 
+      <mat-label>Geschwindigkeit</mat-label>
+      <input matInput disabled=true [value]="speed" style="font-size: 24px" > 
+    </mat-form-field>
     <button mat-fab color="basic" style="margin: 5px" (click)="onFaster()">
-      <mat-icon>call_made</mat-icon>
+      <mat-icon>exposure_plus_1</mat-icon>
     </button>
-    <div class="mat-body">Schneller</div>
   </mat-grid-tile>
 </mat-grid-list>

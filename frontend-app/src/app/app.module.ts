@@ -1,7 +1,7 @@
 // import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatGridListModule, MatIconModule, MatSidenavModule, MatToolbarModule, MatListModule, MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatGridListModule, MatIconModule, MatSidenavModule, MatToolbarModule, MatListModule, MatInputModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatGridListModule,
     MatListModule,
     MatIconModule,
-    MatFormFieldModule,
+    MatInputModule,
     HttpClientModule
   ],
   providers: [],
