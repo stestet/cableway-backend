@@ -170,13 +170,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
 
 
 
 var CablewayComponent = /** @class */ (function () {
     function CablewayComponent(http) {
+        var _this = this;
         this.http = http;
         this.speed = '?';
+        var statusPoller = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["timer"])(500, 1000);
+        statusPoller.subscribe(function (t) { return _this.getStatus(); });
     }
     CablewayComponent.prototype.ngOnInit = function () {
     };
@@ -190,10 +195,18 @@ var CablewayComponent = /** @class */ (function () {
         this.http.get('stop').subscribe();
     };
     CablewayComponent.prototype.onFaster = function () {
-        this.http.get('faster').subscribe();
+        var _this = this;
+        this.http.get('faster').subscribe(function (data) { return null; }, function (error) { return _this.speed = '?'; });
+        this.getStatus();
     };
     CablewayComponent.prototype.onSlower = function () {
-        this.http.get('slower').subscribe();
+        var _this = this;
+        this.http.get('slower').subscribe(function (data) { return null; }, function (error) { return _this.speed = '?'; });
+        this.getStatus();
+    };
+    CablewayComponent.prototype.getStatus = function () {
+        var _this = this;
+        this.http.get('status').subscribe(function (data) { return _this.speed = data['speed']; }, function (error) { return _this.speed = '?'; });
     };
     CablewayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
