@@ -121,7 +121,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatInputModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
             providers: [],
@@ -153,7 +153,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-grid-list cols=\"1\" rowHeight=\"75\">\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"3\"> \r\n    <img src=\"assets/seilbahn.jpg\">\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <button mat-fab style=\"margin: 5px\" (click)=\"onStartLeft()\">\r\n      <mat-icon>skip_previous</mat-icon>\r\n    </button>\r\n    <button mat-fab style=\"margin: 5px\" (click)=\"onStop()\">\r\n      <mat-icon>stop</mat-icon>\r\n    </button>\r\n    <button mat-fab style=\"margin: 5px\" (click)=\"onStartRight()\">\r\n      <mat-icon>skip_next</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <div class=\"mat-body\">Langsamer</div>\r\n    <button mat-fab color=\"basic\" style=\"margin: 5px\" (click)=\"onSlower()\">\r\n      <mat-icon>call_received</mat-icon>\r\n    </button>\r\n    <button mat-fab color=\"basic\" style=\"margin: 5px\" (click)=\"onFaster()\">\r\n      <mat-icon>call_made</mat-icon>\r\n    </button>\r\n    <div class=\"mat-body\">Schneller</div>\r\n  </mat-grid-tile>\r\n</mat-grid-list>"
+module.exports = "<mat-grid-list cols=\"1\" rowHeight=\"90\">\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"3\"> \r\n    <img src=\"assets/seilbahn.jpg\">\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">\r\n    <button mat-fab style=\"margin: 5px; \" (click)=\"onStartLeft()\">\r\n      <mat-icon style=\"font-size: 42px; display: flex; align-items: center; justify-content: center;\">replay_5</mat-icon>\r\n    </button>\r\n    <button mat-fab style=\"margin: 5px\" (click)=\"onStop()\">\r\n      <mat-icon  style=\"font-size: 36px; display: flex; align-items: center; justify-content: center;\">stop</mat-icon>\r\n    </button>\r\n    <button mat-fab style=\"margin: 5px\" (click)=\"onStartRight()\">\r\n      <mat-icon  style=\"font-size: 42px; display: flex; align-items: center; justify-content: center;\">forward_5</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n  <mat-grid-tile colspan=\"1\" rowspan=\"1\">   \r\n    <button mat-fab color=\"basic\" style=\"margin: 5px\" (click)=\"onSlower()\">\r\n      <mat-icon>exposure_neg_1</mat-icon>\r\n    </button>\r\n    <mat-form-field appearance=\"standard\" color=\"basic\" style=\"width: 90px; text-align: center\" > \r\n      <mat-label>Geschwindigkeit</mat-label>\r\n      <input matInput disabled=true [value]=\"speed\" style=\"font-size: 24px\" > \r\n    </mat-form-field>\r\n    <button mat-fab color=\"basic\" style=\"margin: 5px\" (click)=\"onFaster()\">\r\n      <mat-icon>exposure_plus_1</mat-icon>\r\n    </button>\r\n  </mat-grid-tile>\r\n</mat-grid-list>\r\n"
 
 /***/ }),
 
@@ -176,7 +176,7 @@ __webpack_require__.r(__webpack_exports__);
 var CablewayComponent = /** @class */ (function () {
     function CablewayComponent(http) {
         this.http = http;
-        this.title = 'Sebastians Seilbahn';
+        this.speed = '?';
     }
     CablewayComponent.prototype.ngOnInit = function () {
     };
@@ -197,7 +197,6 @@ var CablewayComponent = /** @class */ (function () {
     };
     CablewayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            preserveWhitespaces: true,
             selector: 'app-cableway',
             template: __webpack_require__(/*! ./cableway.component.html */ "./src/app/cableway/cableway.component.html"),
             styles: [__webpack_require__(/*! ./cableway.component.css */ "./src/app/cableway/cableway.component.css")]
@@ -229,7 +228,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar>\n  <mat-toolbar-row>\n    <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n      <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n    </button>\n    Sebastians Seilbahn\n  </mat-toolbar-row>\n</mat-toolbar>\n<mat-sidenav-container hasBackdrop=true>\n  <mat-sidenav #drawer>\n    <mat-action-list>\n      <button mat-list-item (click)=\"onShutdown()\">\n        <mat-icon style=\"margin: 5px\">power_settings_new</mat-icon> Ausschalten\n      </button>\n    </mat-action-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <app-cableway></app-cableway>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
+module.exports = "<mat-toolbar>\n  <mat-toolbar-row>\n    <button type=\"button\" mat-icon-button (click)=\"drawer.toggle()\">\n      <mat-icon>menu</mat-icon>\n    </button>\n    SebStet's Seilbahn\n  </mat-toolbar-row>\n</mat-toolbar>\n<mat-sidenav-container hasBackdrop=true>\n  <mat-sidenav #drawer>\n    <mat-action-list>\n      <button mat-list-item (click)=\"onShutdown()\">\n        <mat-icon>power_settings_new</mat-icon> Ausschalten\n      </button>\n    </mat-action-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <app-cableway></app-cableway>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
 
 /***/ }),
 
