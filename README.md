@@ -21,12 +21,12 @@ Was braucht's / What's it take:
 
 ## Lösungsansatz / Solution approach
 
-Der Raspberry Pi ist als WiFi-Access-Point aufgesetzt auf dem eine python-basierte Webapplikation gehostet wird (Angular-Frontend mit CherryPy-Backend).
+Der Raspberry Pi ist als WiFi-Access-Point aufgesetzt auf dem eine Webapplikation gehostet wird (Angular-Frontend mit CherryPy-Backend).
 Das Smartphone greift via WiFi auf die Webapplikation zu und zeigt im Browser des Smartphones die Bedienoberfläche der Seilbahn an.
 Steuerbefehle vom Smartphone (z.B. Start, Stopp) werden vom CherryPy-Backend via RPi Motor Driver Board an den Motor weitergeleitet.
 Die Motor-Bewegungen (links/rechts) sind zeitlich (5s) beschränkt, sprich nach dieser Zeit hört der Motor auf sich zu drehen. Dabei geht es darum, Motorbeschädigungen (z.B. durch Überhitzen) bei Fehlbedienung zu verhindern.
 
-The Raspberry Pi is set up as a WiFi access point on which a python-based web application is hosted (angular frontend with CherryPy backend).
+The Raspberry Pi is set up as a WiFi access point on which a web application is hosted (angular frontend with CherryPy backend).
 The smartphone accesses the web application via WiFi and displays the user interface of the cable way in the smartphone's browser.
 Control commands from the smartphone (e.g. start, stop) are forwarded from the CherryPy backend to the motor via the RPi Motor Driver Board.
 The motor movements (left/right) are limited in time (5s), i.e. after this time the motor stops turning. The aim is to prevent motor damage (e.g. due to overheating) due to operating errors.
