@@ -15,14 +15,14 @@
   </mat-grid-tile>
   <mat-grid-tile colspan="1" rowspan="1">   
     
-    <mat-form-field appearance="outline" color="basic" style="width: 115px; height: 75px; text-align: center;" > 
+    <mat-form-field appearance="outline" color="basic" style="width: 220px; height: 75px; text-align: center;" > 
       <mat-label>Geschwindigkeit</mat-label>
-      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center" >
-        <button mat-flat-button color="basic" style="margin: 0px 20px; font-size: 24px;" (click)="onSlower()">
+      <div style="display:flex; flex-direction: row; justify-content:center; align-items: center" >
+        <button mat-flat-button color="basic" style="margin: 0 0 0 10; font-size: 24px;" (click)="onSlower()">
           -
         </button>
         <input matInput disabled=true [value]="speed" style="font-size: 24px;" > 
-        <button mat-flat-button color="basic" style="margin: 0px 20px; font-size: 24px;" (click)="onFaster()">
+        <button mat-flat-button color="basic" style="margin: 0 10 0 0; font-size: 24px;" (click)="onFaster()">
           +
         </button>
       </div>
