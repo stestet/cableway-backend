@@ -1,28 +1,32 @@
-<mat-grid-list cols="1" rowHeight="100">
+<mat-grid-list cols="1" rowHeight="90">
   <mat-grid-tile colspan="1" rowspan="3"> 
     <img style='height: 100%; width: 100%; object-fit: contain' src="assets/seilbahn.jpg">
   </mat-grid-tile>
   <mat-grid-tile colspan="1" rowspan="1">
-    <button mat-fab style="margin: 5px" (click)="onStartLeft()">
+    <button mat-fab style="margin: 10px" (click)="onStartLeft()">
       <mat-icon style="font-size: 42px; display: flex; align-items: center; justify-content: center;">replay_5</mat-icon>
     </button>
-    <button mat-fab style="margin: 5px" (click)="onStop()">
+    <button mat-fab style="margin: 10px" (click)="onStop()">
       <mat-icon  style="font-size: 36px; display: flex; align-items: center; justify-content: center;">stop</mat-icon>
     </button>
-    <button mat-fab style="margin: 5px" (click)="onStartRight()">
+    <button mat-fab style="margin: 10px" (click)="onStartRight()">
       <mat-icon  style="font-size: 42px; display: flex; align-items: center; justify-content: center;">forward_5</mat-icon>
     </button>
   </mat-grid-tile>
   <mat-grid-tile colspan="1" rowspan="1">   
-    <button mat-fab color="basic" style="margin: 5px" (click)="onSlower()">
-      <mat-icon>exposure_neg_1</mat-icon>
-    </button>
-    <mat-form-field appearance="outline" color="basic" style="width: 115px; height: 75px; text-align: center" > 
+    
+    <mat-form-field appearance="outline" color="basic" style="width: 115px; height: 75px; text-align: center;" > 
       <mat-label>Geschwindigkeit</mat-label>
-      <input matInput disabled=true [value]="speed" style="font-size: 24px" > 
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center" >
+        <button mat-flat-button color="basic" style="margin: 0px 20px; font-size: 24px;" (click)="onSlower()">
+          -
+        </button>
+        <input matInput disabled=true [value]="speed" style="font-size: 24px;" > 
+        <button mat-flat-button color="basic" style="margin: 0px 20px; font-size: 24px;" (click)="onFaster()">
+          +
+        </button>
+      </div>
     </mat-form-field>
-    <button mat-fab color="basic" style="margin: 5px" (click)="onFaster()">
-      <mat-icon>exposure_plus_1</mat-icon>
-    </button>
+    
   </mat-grid-tile>
 </mat-grid-list>
