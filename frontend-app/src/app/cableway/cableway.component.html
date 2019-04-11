@@ -1,15 +1,15 @@
 <mat-grid-list cols="1" rowHeight="100">
   <mat-grid-tile colspan="1" rowspan="3"> 
-    <img src="assets/seilbahn.jpg">
+    <img style='height: 100%; width: 100%; object-fit: contain' src="assets/seilbahn.jpg">
   </mat-grid-tile>
   <mat-grid-tile colspan="1" rowspan="1">
-    <button mat-fab style="margin: 5px; -webkit-touch-callout: none; -moz-user-select: none;" (click)="onStartLeft()">
+    <button mat-fab style="margin: 5px" (click)="onStartLeft()">
       <mat-icon style="font-size: 42px; display: flex; align-items: center; justify-content: center;">replay_5</mat-icon>
     </button>
-    <button mat-fab style="margin: 5px; -webkit-touch-callout: none; -moz-user-select: none;" (click)="onStop()">
+    <button mat-fab style="margin: 5px" (click)="onStop()">
       <mat-icon  style="font-size: 36px; display: flex; align-items: center; justify-content: center;">stop</mat-icon>
     </button>
-    <button mat-fab style="margin: 5px; -webkit-touch-callout: none; -moz-user-select: none;" (click)="onStartRight()">
+    <button mat-fab style="margin: 5px" (click)="onStartRight()">
       <mat-icon  style="font-size: 42px; display: flex; align-items: center; justify-content: center;">forward_5</mat-icon>
     </button>
   </mat-grid-tile>
